@@ -68,23 +68,23 @@ User Manual For Website
  User Manual For Telegram Bot
  
 1. This is the PKOB HelloWorld BOT. The user can click the start button to start the telegram bot.
-<p><img src="images/tbot.png" /></p>
+<p><img src="images/tbot.jpeg" /></p>
    
 2.After clicking the start button, the bot will respond and display the commands and descriptions about this bot. There have 2 keyboard button which are semak status and tujuan pkob for user to click.
-<p><img src="images/telegramBot2.png" /></p>
+<p><img src="images/telegramBot2.jpeg" /></p>
   
 3.When the user uses the /tujuan pkob command, the bot will respond and display the bot's functions. 
-<p><img src="images/telegramBot3.png" /></p>
+<p><img src="images/telegramBot3.jpeg" /></p>
   
 4.When the user uses the /semak status command, the bot will respond and ask the user to enter their data in the requested format, namely the Nombor Kad Pengenalan and the Nombor Telefon.
-<p><img src="images/telegramBot4.png" /></p>
+<p><img src="images/telegramBot4.jpeg" /></p>
  
 If the user input the information in the requested format, but the entered data is not searched in the database, the bot will respond and display maklumat tidak didapati. Users can go to website link to apply their data first.
 If the user enters the information in the requested format and finds the entered data in the database, the bot will respond and display their data. The information of victim will be display and user can check their name, age, IC number, phone number, and status. Status includes sedang diproses, diterima, ditolak.
 If the information entered by the user does not conform to the format, the bot will respond and display tidak faham mesej anda! Please follow the format or type /start command to activate again the bot.
-<p><img src="images/telegramBot5.png" /></p>
-<p><img src="images/telegramBot6.png" /></p>
-<p><img src="images/telegramBot7.png" /></p>
-<p><img src="images/telegramBot8.png" /></p>
+<p><img src="images/telegramBot5.jpeg" /></p>
+<p><img src="images/telegramBot6.jpeg" /></p>
+<p><img src="images/telegramBot7.jpeg" /></p>
+<p><img src="images/telegramBot8.jpeg" /></p>
 
 ## YouTube Presentation
