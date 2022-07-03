@@ -1,0 +1,168 @@
+{% extends "App_PKOB/base.html" %}
+{% block title %}
+    HALAMAN UTAMA
+{% endblock %}
+{% block content %}
+    <p class="mb-100 mt-10"><br>
+    <h1 style="text-align:center;" class="display-4"></h1><br>
+    <h3 style="text-align:center;font-size:2vw;" class="display-4"></h3>
+    <h3 style="text-align:center;font-size:2vw;" class="display-4"></h3>
+
+    <p align=center>
+        <br><br>
+
+        <br>
+    </p>
+  <div class="row">
+
+      <div class="col-12 col-sm-6 col-xl-3 mb-4">
+            <div class="card border-0 shadow">
+                <div class="card-body", style="background-color:#B4CFEC;">
+                    <div align=center>
+                        <div class="col-12 col-xl-5 text-xl-center mb-3 mb-xl-0 d-flex align-items-center justify-content-xl-center">
+
+                        </div>
+                        <div align=center>
+                            <div class="d-none d-sm-block">
+                                <h2 class="h6 text-gray-400 mb-0">Jumlah Mangsa</h2>
+                                <h3 class="fw-extrabold mb-2">{{victimsnum}}</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-xl-3 mb-4">
+            <div class="card border-0 shadow", style="background-color:#B4CFEC;">
+                <div class="card-body">
+                    <div align=center>
+                        <div class="col-12 col-xl-5 text-xl-center mb-3 mb-xl-0 d-flex align-items-center justify-content-xl-center">
+                            <div class="d-sm-none">
+                            </div>
+                        </div>
+                        <div align=center>
+                            <div class="d-none d-sm-block">
+                                <h2 class="h6 text-gray-400 mb-0">Jumlah Pendaftaran</h2>
+                                <h3 class="fw-extrabold mb-2">{{requests}}</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-xl-3 mb-4">
+            <div class="card border-0 shadow", style="background-color:#B4CFEC;">
+                <div class="card-body">
+                    <div align=center>
+                        <div class="col-12 col-xl-5 text-xl-center mb-3 mb-xl-0 d-flex align-items-center justify-content-xl-center">
+                            <div class="d-sm-none">
+                            </div>
+                        </div>
+                        <div align=center>
+                            <div class="d-none d-sm-block">
+                                <h2 class="h6 text-gray-400 mb-0">Pendaftaran Ditolak</h2>
+                                <h3 class="fw-extrabold mb-2">{{declines}}</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      <div class="col-12 col-sm-6 col-xl-3 mb-4">
+            <div class="card border-0 shadow", style="background-color:#B4CFEC;">
+                <div class="card-body">
+                    <div align=center>
+                        <div class="col-12 col-xl-5 text-xl-center mb-3 mb-xl-0 d-flex align-items-center justify-content-xl-center">
+                            <div class="d-sm-none">
+                            </div>
+                        </div>
+                        <div align=center>
+                            <div class="d-none d-sm-block">
+                                <h2 class="h6 text-gray-400 mb-0">Bantuan Diterima</h2>
+                                <h3 class="fw-extrabold mb-2">{{receives}}</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    <div class="row">
+
+      <div class="col-12 col-sm-6 col-xl-3 mb-4">
+            <div class="card border-0 shadow", style="background-color:#CFECEC;">
+                <div class="card-body">
+                    <div align=center>
+                        <div class="col-12 col-xl-5 text-xl-center mb-3 mb-xl-0 d-flex align-items-center justify-content-xl-center">
+
+                        </div>
+                        <div align=center>
+                            <div class="d-none d-sm-block">
+                                <h2 class="h6 text-gray-400 mb-0">Bantuan Baik Pulih</h2>
+                                <h3 class="fw-extrabold mb-2">{{victims}}</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-xl-3 mb-4">
+            <div class="card border-0 shadow", style="background-color:#CFECEC;">
+                <div class="card-body">
+                    <div align=center>
+                        <div class="col-12 col-xl-5 text-xl-center mb-3 mb-xl-0 d-flex align-items-center justify-content-xl-center">
+                            <div class="d-sm-none">
+                            </div>
+                        </div>
+                        <div align=center>
+                            <div class="d-none d-sm-block">
+                                <h2 class="h6 text-gray-400 mb-0">Bantuan Rumah Baru</h2>
+                                <h3 class="fw-extrabold mb-2">{{victims1}}</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-xl-3 mb-4">
+            <div class="card border-0 shadow", style="background-color:#CFECEC;">
+                <div class="card-body">
+                    <div align=center>
+                        <div class="col-12 col-xl-5 text-xl-center mb-3 mb-xl-0 d-flex align-items-center justify-content-xl-center">
+                            <div class="d-sm-none">
+                            </div>
+                        </div>
+                        <div align=center>
+                            <div class="d-none d-sm-block">
+                                <h2 class="h6 text-gray-400 mb-0">Bantuan Bulanan</h2>
+                                <h3 class="fw-extrabold mb-2">{{victims2}}</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-xl-3 mb-4">
+            <div class="card border-0 shadow", style="background-color:#CFECEC;">
+                <div class="card-body">
+                    <div align=center>
+                        <div class="col-12 col-xl-5 text-xl-center mb-3 mb-xl-0 d-flex align-items-center justify-content-xl-center">
+
+                        </div>
+                        <div align=center>
+                            <div class="d-none d-sm-block">
+                                <h2 class="h6 text-gray-400 mb-0">Bantuan Bekalan Makanan</h2>
+                                <h3 class="fw-extrabold mb-2">{{victims3}}</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+
+    <br><br><br><br>
+<hr style=" border-radius: 100px;border-top: 2px solid grey"/>
+{% endblock %}

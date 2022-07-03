@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    h3 {
+      font-family: "Times New Roman", Times, serif;
+    }
+    h1 {
+      font-family: "Times New Roman", Times, serif;
+    }
+    .topnav {
+      overflow: hidden;
+      background-color: black;
+    }
+    .topnav a {
+      float: left;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+    .topnav a:hover {
+      background-color: yellow;
+      color: black;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    #myInput {
+
+      background-position: 10px 10px;
+      background-repeat: no-repeat;
+      width: 100%;
+      font-size: 16px;
+      padding: 12px 20px 12px 40px;
+      border: 1px solid #ddd;
+      margin-bottom: 12px;
+    }
+
+    #myTable {
+      border-collapse: collapse;
+      width: 100%;
+      border: 1px solid #ddd;
+      font-size: 18px;
+    }
+
+    #myTable th, #myTable td {
+      text-align: left;
+      padding: 12px;
+    }
+
+    #myTable tr {
+      border-bottom: 1px solid #ddd;
+    }
+
+    #myTable tr.header, #myTable tr:hover {
+      background-color: #f1f1f1;
+}
+
+</style>
+<body>
+    <div style="panding-left:16px">
+        <h1 class="mb-3 mt-4 text-center text-Georgia" style="font-size: 50px;background-color:white;color:#000000;">Pusat Kawalan Operasi Bencana (PKOB)</h1>
+    </div>
+        <div class="topnav mb-3 mt-4">
+        <a href="/pkob/home/" >HALAMAN UTAMA</a>
+        <a href="/pkob/report/">MANGSA DIDAFTARKAN</a>
+        <a href="/pkob/add/" class="active" >DAFTAR MANGSA</a>
+        <a href="/pkob/reportrequest/">PENDAFTARAN</a>
+        <a href="/pkob/reportdecline/">PENDAFTARAN DITOLAK</a>
+        <a href="/pkob/reportreceive/">BANTUAN DITERIMA</a>
+    <li style="float:right"><a href="/">LOG KELUAR</a></li>
+
+    </div>
+
+{% block content %}
+{% endblock %}
+</body>
+</html>

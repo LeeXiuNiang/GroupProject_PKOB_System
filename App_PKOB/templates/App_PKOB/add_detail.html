@@ -1,0 +1,192 @@
+{% extends "App_PKOB/base.html" %}
+{% block title %}
+    DAFTAR MANGSA
+{% endblock %}
+{% block content %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>ADD VICTIM</title>
+  </head>
+  <body>
+    <div class="container mt-3">
+        {% for message in messages %}
+        <p class="alert {{ message.tags }} alert-dismissible" role="alert">{{ message }}<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></p>
+        {% endfor %}
+
+        {% if victim_info %}
+            <form method="POST" action={% url "update_detail" victim_info.ic_no %}><br>
+                {% csrf_token %}
+
+        <div class="form-group mb-3">
+                    <label>MUKIM</label>
+                    <input type="text" class="form-control" value="{{ victim_info.mukim }}" name="mukim" title="Sila masukkan abjad sahaja"  placeholder="Masukkan Mukim" required>
+
+                </div><br>
+                <div></div>
+                <div class="form-group mb-3">
+                    <label>NAMA</label>
+                    <input type="text" class="form-control" value="{{ victim_info.name }}" name="name" pattern="[a-zA-Z][a-zA-Z\s]*" title="Sila masukkan abjad sahaja"  placeholder="Masukkan Nama" required>
+
+                </div><br>
+                <div class="form-group mb-3">
+                    <label>NO TELEFON</label>
+                    <input type="text" class="form-control" value="{{ victim_info.phone_no }}" maxlength="11"  name="phone_no" pattern="0[0-9]{08,11}" title="Masukkan 9 hingga 11 nombor yang bermula dari 0" placeholder="Masukkan Nombor Telefon ( cth: 01120768009 )" required>
+
+                </div><br>
+                <div class="form-group mb-3">
+                    <label>NO IC</label>
+                    <input type="text" readonly class="form-control" value="{{ victim_info.ic_no }}" name="ic_no" pattern="((((0[048]|[2468][048]|[13579][26])0229)|(([0-9]{2})(((0[13578]|1[02])(0[1-9]|[12][0-9]|3[01]))|((0[469]|1[1])(0[1-9]|[12][0-9]|3[0]))))|(([0-9]{2})(0[2])(0[1-9]|1[0-9]|2[0-8])))([0-9]{6}))" title="Sila masukkan No IC dengan 12 angka sahaja (YYMMDDxxxxxx)"  placeholder="Masukkan Nombor IC ( cth: 990329077026 )" required>
+
+                </div><br>
+
+                <div class="form-group mb-3">
+                    <label>NO RUMAH</label>
+                    <input type="text"  class="form-control" value="{{ victim_info.no_rumah }}" name="no_rumah" title="Sila masukkan no rumah sahaja"  placeholder="Masukkan No Rumah" required>
+
+                </div><br>
+
+                <div class="form-group mb-3">
+                    <label>JALAN/LRG</label>
+                    <input type="text" class="form-control" value="{{ victim_info.jalan_lrg }}" name="jalan_lrg" title="Sila masukkan jalan/lorong sahaja"  placeholder="Masukkan JALAN/LRG" required>
+
+                </div><br>
+
+                <div class="form-group mb-3">
+                    <label>KG/TMN</label>
+                    <input type="text" class="form-control" value="{{ victim_info.kg_tmn }}" name="kg_tmn" title="Sila masukkan kg/tmn sahaja"  placeholder="Masukkan KG/TMN" required>
+
+                </div><br>
+
+               <div class="form-group mb-3">
+                    <label>PEKERJAAAN</label>
+                    <input type="text" class="form-control" value="{{ victim_info.kerja }}" name="kerja" title="Sila masukkan pekerjaan sahaja"  placeholder="Masukkan Pekerjaan" required>
+
+                </div><br>
+
+               <div class="form-group mb-3">
+                    <label>TANGGUNGAN</label>
+                    <input type="text" class="form-control" value="{{ victim_info.tanggungan }}" name="tanggungan" pattern="[0-9]+" title="Sila masukkan tanggungan dalam angka sahaja"  placeholder="Masukkan Tanggungan" required>
+
+                </div><br>
+
+               <div class="form-group mb-3">
+                    <label>SEBAB MOHON</label>
+                    <input type="text" class="form-control" value="{{ victim_info.sebab }}" name="sebab" title="Sila masukkan sebab mohon sahaja"  placeholder="Masukkan Sebab" required>
+
+                </div><br>
+
+               <div class="form-group mb-3">
+                    <label>PENDAPATAN</label>
+                    <input type="text" class="form-control" value="{{ victim_info.pendapatan }}" name="pendapatan"  title="Sila masukkan pendapatan dalam angka sahaja"  placeholder="Masukkan Pendapatan" required>
+
+                </div><br>
+
+               <div class="form-group mb-3">
+                    <label>BANTUAN</label>
+                    <input type="text" readonly class="form-control" value="{{ victim_info.bantuan }}" name="bantuan" title="Sila masukkan bantuan sahaja"  placeholder="Masukkan bantuan" required>
+
+                </div><br>
+                <div class='text-center mt-4'>
+                    <button type="submit" class="btn btn-success">KEMASKINI</button>
+                </div>
+            </form>
+
+        {% else %}
+            <form method="POST" ><br>
+            {% csrf_token %}
+                <div class="form-group mb-3">
+                <label>MUKIM</label>
+                <input type="text" class="form-control"  name="mukim" title="Sila masukkan abjad sahaja" placeholder="Masukkan Mukim" required>
+
+            </div><br>
+            <div></div>
+            <div class="form-group mb-3">
+                <label>NAMA</label>
+                <input type="text" class="form-control"  name="name" pattern="[a-zA-Z][a-zA-Z\s]*" title="Sila masukkan abjad sahaja" placeholder="Masukkan Nama" required>
+
+            </div><br>
+            <div class="form-group mb-3">
+                <label>NO TELEFON</label>
+                <input type="text" class="form-control" maxlength="11" name="phone_no" pattern="0[0-9]{08,11}" title="Masukkan 9 hingga 11 nombor yang bermula dari 0" placeholder="Masukkan Nombor Telefon ( cth: 01120768009 )" required>
+
+            </div><br>
+
+                <div class="form-group mb-3">
+                <label>NO IC</label>
+                <input type="text" class="form-control" maxlength="12" name="ic_no" pattern="((((0[048]|[2468][048]|[13579][26])0229)|(([0-9]{2})(((0[13578]|1[02])(0[1-9]|[12][0-9]|3[01]))|((0[469]|1[1])(0[1-9]|[12][0-9]|3[0]))))|(([0-9]{2})(0[2])(0[1-9]|1[0-9]|2[0-8])))([0-9]{6}))" title="Sila masukkan No IC dengan 12 angka sahaja (YYMMDDxxxxxx)" placeholder="Masukkan Nombor IC ( cth: 990329077026 )" required>
+
+                </div><br>
+            <div class="form-group mb-3">
+                <label>NO RUMAH</label>
+                <input type="text" class="form-control" maxlength="20" name="no_rumah"  title="Sila masukkan no rumah" placeholder="Masukkan No Rumah" required>
+
+             </div><br>
+
+                <div class="form-group mb-3">
+                <label>JALAN/LRG</label>
+                <input type="text" class="form-control" maxlength="50" name="jalan_lrg"  title="Sila masukkan jalan/lorong" placeholder="Masukkan Jalan/Lrg" required>
+
+             </div><br>
+
+                 <div class="form-group mb-3">
+                <label>KG/TMN</label>
+                <input type="text" class="form-control" maxlength="50" name="kg_tmn"  title="Sila masukkan kg/tmn" placeholder="Masukkan Kg/Tmn" required>
+
+             </div><br>
+
+                 <div class="form-group mb-3">
+                <label>PEKERJAAN</label>
+                <input type="text" class="form-control" maxlength="20" name="kerja"  title="Sila masukkan pekerjaan" placeholder="Masukkan Pekerjaan" required>
+
+             </div><br>
+
+                <div class="form-group mb-3">
+                <label>TANGGUNGAN</label>
+                <input type="text" class="form-control" maxlength="3" name="tanggungan" pattern="[0-9]+" title="Sila masukkan tanggungan dalam angka sahaja" placeholder="Masukkan Tanggungan" required>
+
+             </div><br>
+
+                 <div class="form-group mb-3">
+                <label>SEBAB MOHON</label>
+                <input type="text" class="form-control" maxlength="50" name="sebab"  title="Sila masukkan sebab mohon" placeholder="Masukkan Sebab Memohon" required>
+
+             </div><br>
+
+                 <div class="form-group mb-3">
+                <label>PENDAPATAN</label>
+                <input type="text" class="form-control" maxlength="20" name="pendapatan" pattern="[0-9]+" title="Sila masukkan pendapatan dalam angka sahaja" placeholder="Masukkan Pendapatan" required>
+
+             </div><br>
+
+                 <div class="form-group mb-3">
+                <label for ="bantuan">BANTUAN</label>
+                <select name ="bantuan" class="form-control" required>
+                    <option value ="Bantuan Baik Pulih">Bantuan Baik Pulih</option>
+                    <option value ="Bantuan Rumah Baru">Bantuan Rumah Baru</option>
+                    <option value ="Bantuan Bulanan">Bantuan Bulanan</option>
+                    <option value ="Bantuan Bekalan Makanan">Bantuan Bekalan Makanan</option>
+
+                </select>
+
+             </div><br>
+            <div class='text-center mt-4'>
+                <button type="submit" class="btn btn-success">DAFTAR</button>
+            </div>
+        </form>
+    {% endif %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    </div>
+  </body>
+</html>
+{% endblock %}
