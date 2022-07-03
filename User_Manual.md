@@ -87,4 +87,3 @@ If the information entered by the user does not conform to the format, the bot w
 <p><img src="images/telegramBot7.jpeg" /></p>
 <p><img src="images/telegramBot8.jpeg" /></p>
 
-## YouTube Presentation
